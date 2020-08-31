@@ -24,7 +24,19 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         farenheitLabel.text = "32º F"
+        changeSliderColor()
     }
+    
+    func changeSliderColor() {
+           if self.traitCollection.userInterfaceStyle == .dark {
+            tempSlider.tintColor = .white
+            tempSlider.thumbTintColor = .white
+            tempSlider.minimumTrackTintColor = .white
+            tempSlider.maximumTrackTintColor = .purple
+//            tempSlider.setMinimumTrackImage(UIImage(named: "moon"), for: .normal)
+//            tempSlider.setMaximumTrackImage(UIImage(named: "moon.full"), for: .normal)
+           }
+       }
 
     @IBAction func sliderValueChanged(_ sender: UISlider) {
         let tempCelsius = Int(sender.value)

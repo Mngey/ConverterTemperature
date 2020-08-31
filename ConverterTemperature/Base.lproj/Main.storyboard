@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6ed-yb-2D7">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -378,27 +378,30 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rHp-Lq-EbO">
-                                <rect key="frame" x="354" y="20" width="40" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="u0t-dd-eLV"/>
-                                </constraints>
+                                <rect key="frame" x="354" y="20" width="45" height="45"/>
                                 <color key="tintColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <state key="normal" title="Button" image="clear" catalog="system">
-                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="50"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="36"/>
                                 </state>
                                 <connections>
                                     <action selector="closeButtonTapped:" destination="w0i-Cs-MmI" eventType="touchUpInside" id="V7k-uD-Ymk"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tempImg" translatesAutoresizingMaskIntoConstraints="NO" id="MxG-UC-yuA">
+                                <rect key="frame" x="87" y="258" width="240" height="260"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="W5a-JD-DVp" firstAttribute="leading" secondItem="Rsd-uw-omj" secondAttribute="leading" constant="38" id="0bF-uW-9Rn"/>
+                            <constraint firstItem="rHp-Lq-EbO" firstAttribute="leading" relation="lessThanOrEqual" secondItem="Rsd-uw-omj" secondAttribute="leading" constant="354" id="1B7-eZ-BP6"/>
                             <constraint firstItem="Rsd-uw-omj" firstAttribute="trailing" secondItem="W5a-JD-DVp" secondAttribute="trailing" constant="37" id="3hm-va-8im"/>
                             <constraint firstItem="Rsd-uw-omj" firstAttribute="bottom" secondItem="W5a-JD-DVp" secondAttribute="bottom" constant="51" id="8na-eY-cb0"/>
-                            <constraint firstItem="rHp-Lq-EbO" firstAttribute="trailing" secondItem="0ww-TT-aWQ" secondAttribute="trailingMargin" id="BkR-Sz-S9Z"/>
-                            <constraint firstItem="rHp-Lq-EbO" firstAttribute="leading" secondItem="Rsd-uw-omj" secondAttribute="leading" constant="354" id="Lfi-Fl-N1i"/>
-                            <constraint firstItem="rHp-Lq-EbO" firstAttribute="top" secondItem="Rsd-uw-omj" secondAttribute="top" constant="20" id="dfk-uY-Ulf"/>
+                            <constraint firstItem="rHp-Lq-EbO" firstAttribute="top" secondItem="Rsd-uw-omj" secondAttribute="top" constant="20" id="OQj-QQ-A8m"/>
+                            <constraint firstItem="rHp-Lq-EbO" firstAttribute="height" secondItem="0ww-TT-aWQ" secondAttribute="height" multiplier="0.0534442" id="hAW-DA-zIb"/>
+                            <constraint firstItem="Rsd-uw-omj" firstAttribute="trailing" secondItem="rHp-Lq-EbO" secondAttribute="trailing" constant="15" id="hCf-SD-Ln2"/>
+                            <constraint firstItem="rHp-Lq-EbO" firstAttribute="width" secondItem="0ww-TT-aWQ" secondAttribute="width" multiplier="0.108696" id="jQe-3N-r2y"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Rsd-uw-omj"/>
                     </view>
@@ -470,5 +473,6 @@
         <image name="moon" catalog="system" width="128" height="121"/>
         <image name="sun.min" catalog="system" width="128" height="121"/>
         <image name="sun.min.fill" catalog="system" width="128" height="121"/>
+        <image name="tempImg" width="830" height="934"/>
     </resources>
 </document>
